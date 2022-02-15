@@ -3,8 +3,8 @@ import acm.graphics.GOval;
 
 public class Ball extends GOval {
 
-    private double deltaX = 1;
-    private double deltaY = -1;
+    private double deltaX = 2;
+    private double deltaY = -2;
     private GCanvas screen;
     public boolean lost = false;
 
@@ -28,8 +28,8 @@ public class Ball extends GOval {
         if(getY() >= screen.getHeight() - getHeight()){
             // set the lost flag
             lost = true;
-            deltaX = 1;
-            deltaY = -1;
+            deltaX *= 1;
+            deltaY *= -1;
         }
 
         // check to see if the ball hits the left side of the screen
