@@ -19,3 +19,4 @@ public class Brick extends GRect {
     }
 
 }
+//oaur naur my code, its brocken
