@@ -24,6 +24,8 @@ public class Breakout extends GraphicsProgram {
 
     @Override
     public void init(){
+        setSize(2560, 1440);
+        setBackground(Color.DARK_GRAY);
 
         numBricksInRow = (int) (getWidth() / (Brick.WIDTH + 5.0));
         bricksLeft =10*numBricksInRow;
@@ -45,7 +47,7 @@ public class Breakout extends GraphicsProgram {
         ball = new Ball(getWidth()/2, 350, 10, this.getGCanvas());
         add(ball);
 
-        paddle = new Paddle(230, 430, 50 ,10);
+        paddle = new Paddle(230, 1300, 100,10);
         add(paddle);
 
         //adds the glabels
@@ -81,7 +83,7 @@ public class Breakout extends GraphicsProgram {
                 handleLoss();
             }
 
-            pause(5);
+            pause(1);
         }
     }
 
@@ -190,7 +192,7 @@ public class Breakout extends GraphicsProgram {
 
     private void reset(){
         ball.setLocation(getWidth()/2, 350);
-        paddle.setLocation(230, 430);
+        paddle.setLocation(230, 1300);
 
         livesLabel.setLabel("Your lives " + lives);
         pointsLabel.setLabel("Your points " + points);
